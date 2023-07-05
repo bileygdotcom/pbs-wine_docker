@@ -13,4 +13,6 @@ ENV DBCONNECT=""
 
 COPY ["build","/root/.wine/drive_c/Program Files/ASCON/Pilot-BIM-Server"]
 
-ENTRYPOINT ["wine","/root/.wine/drive_c/Program Files/ASCON/Pilot-BIM-Server/Ascon.Pilot.BimService.exe","-c",$DBCONNECT,$ADMIN,$PATH]
+CMD wine /root/.wine/drive_c/'Program Files'/ASCON/Pilot-BIM-Server/Ascon.Pilot.BimService.exe -c $DBCONNECT $ADMIN $PASS
+
+#ENTRYPOINT ["wine","/root/.wine/drive_c/'Program Files'/ASCON/Pilot-BIM-Server/Ascon.Pilot.BimService.exe","-c",$DBCONNECT,$ADMIN,$PASS]
